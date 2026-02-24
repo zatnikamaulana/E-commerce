@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { supabase } from '@/lib/supabase';
 import { getAuthToken, getUserFromToken } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
@@ -16,12 +15,12 @@ export async function POST(request: NextRequest) {
         }
 
         const formData = await request.formData();
-        const file = formData.get('file') as File;
+        const proofUrl = formData.get('proofUrl') as string;
         const orderId = formData.get('orderId') as string;
 
-        if (!file) {
+        if (!proofUrl) {
             return NextResponse.json(
-                { message: 'File tidak ditemukan' },
+                { message: 'URL bukti pembayaran tidak ditemukan' },
                 { status: 400 }
             );
         }
@@ -50,46 +49,18 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
         }
 
-        // Upload to Supabase Storage
-        const fileExt = file.name.split('.').pop();
-        const fileName = `${orderId}-${Date.now()}.${fileExt}`;
-        const filePath = `payment-proofs/${fileName}`;
-
-        const arrayBuffer = await file.arrayBuffer();
-        const buffer = Buffer.from(arrayBuffer);
-
-        const { data: uploadData, error: uploadError } = await supabase.storage
-            .from('uploads')
-            .upload(filePath, buffer, {
-                contentType: file.type,
-                upsert: false,
-            });
-
-        if (uploadError) {
-            console.error('Upload error:', uploadError);
-            return NextResponse.json(
-                { message: 'Gagal upload file' },
-                { status: 500 }
-            );
-        }
-
-        // Get public URL
-        const { data: urlData } = supabase.storage
-            .from('uploads')
-            .getPublicUrl(filePath);
-
-        // Update payment with proof URL
+        // Update payment with proof URL (from external service like ImgBB)
         await prisma.payment.update({
             where: { orderId },
             data: {
-                proofUrl: urlData.publicUrl,
+                proofUrl: proofUrl,
                 status: 'MENUNGGU',
             },
         });
 
         return NextResponse.json({
-            message: 'Bukti pembayaran berhasil diupload',
-            url: urlData.publicUrl,
+            message: 'Bukti pembayaran berhasil disimpan',
+            url: proofUrl,
         });
     } catch (error) {
         console.error('Upload payment proof error:', error);
