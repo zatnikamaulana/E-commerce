@@ -55,10 +55,10 @@ async function main() {
             category: 'kalung',
             price: 250000,
             stock: 15,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Kalung+Rantai+Emas',
+            imageUrl: 'https://picsum.photos/seed/kalung1/400/400',
             images: [
-                'https://via.placeholder.com/400x400?text=Kalung+1',
-                'https://via.placeholder.com/400x400?text=Kalung+2',
+                'https://picsum.photos/seed/kalung1a/400/400',
+                'https://picsum.photos/seed/kalung1b/400/400',
             ],
         },
         {
@@ -67,8 +67,8 @@ async function main() {
             category: 'kalung',
             price: 180000,
             stock: 20,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Kalung+Liontin',
-            images: ['https://via.placeholder.com/400x400?text=Liontin+Hati'],
+            imageUrl: 'https://picsum.photos/seed/kalung2/400/400',
+            images: ['https://picsum.photos/seed/kalung2a/400/400'],
         },
         // Gelang
         {
@@ -77,8 +77,8 @@ async function main() {
             category: 'gelang',
             price: 150000,
             stock: 25,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Gelang+Charm',
-            images: ['https://via.placeholder.com/400x400?text=Gelang+Silver'],
+            imageUrl: 'https://picsum.photos/seed/gelang1/400/400',
+            images: ['https://picsum.photos/seed/gelang1a/400/400'],
         },
         {
             name: 'Gelang Kulit Premium',
@@ -86,8 +86,8 @@ async function main() {
             category: 'gelang',
             price: 120000,
             stock: 30,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Gelang+Kulit',
-            images: ['https://via.placeholder.com/400x400?text=Leather+Bracelet'],
+            imageUrl: 'https://picsum.photos/seed/gelang2/400/400',
+            images: ['https://picsum.photos/seed/gelang2a/400/400'],
         },
         // Cincin
         {
@@ -96,8 +96,8 @@ async function main() {
             category: 'cincin',
             price: 500000,
             stock: 10,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Cincin+Berlian',
-            images: ['https://via.placeholder.com/400x400?text=Diamond+Ring'],
+            imageUrl: 'https://picsum.photos/seed/cincin1/400/400',
+            images: ['https://picsum.photos/seed/cincin1a/400/400'],
         },
         {
             name: 'Cincin Couple',
@@ -105,8 +105,8 @@ async function main() {
             category: 'cincin',
             price: 200000,
             stock: 15,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Cincin+Couple',
-            images: ['https://via.placeholder.com/400x400?text=Couple+Ring'],
+            imageUrl: 'https://picsum.photos/seed/cincin2/400/400',
+            images: ['https://picsum.photos/seed/cincin2a/400/400'],
         },
         // Anting
         {
@@ -115,8 +115,8 @@ async function main() {
             category: 'anting',
             price: 180000,
             stock: 20,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Anting+Mutiara',
-            images: ['https://via.placeholder.com/400x400?text=Pearl+Earrings'],
+            imageUrl: 'https://picsum.photos/seed/anting1/400/400',
+            images: ['https://picsum.photos/seed/anting1a/400/400'],
         },
         {
             name: 'Anting Hoop Gold',
@@ -124,8 +124,8 @@ async function main() {
             category: 'anting',
             price: 150000,
             stock: 25,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Anting+Hoop',
-            images: ['https://via.placeholder.com/400x400?text=Hoop+Earrings'],
+            imageUrl: 'https://picsum.photos/seed/anting2/400/400',
+            images: ['https://picsum.photos/seed/anting2a/400/400'],
         },
         // Kacamata
         {
@@ -134,8 +134,8 @@ async function main() {
             category: 'kacamata',
             price: 200000,
             stock: 30,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Kacamata+Aviator',
-            images: ['https://via.placeholder.com/400x400?text=Aviator+Sunglasses'],
+            imageUrl: 'https://picsum.photos/seed/kacamata1/400/400',
+            images: ['https://picsum.photos/seed/kacamata1a/400/400'],
         },
         {
             name: 'Kacamata Baca Vintage',
@@ -143,8 +143,8 @@ async function main() {
             category: 'kacamata',
             price: 150000,
             stock: 20,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Kacamata+Vintage',
-            images: ['https://via.placeholder.com/400x400?text=Reading+Glasses'],
+            imageUrl: 'https://picsum.photos/seed/kacamata2/400/400',
+            images: ['https://picsum.photos/seed/kacamata2a/400/400'],
         },
         // Jam Tangan
         {
@@ -153,8 +153,8 @@ async function main() {
             category: 'jam_tangan',
             price: 800000,
             stock: 10,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Jam+Automatic',
-            images: ['https://via.placeholder.com/400x400?text=Automatic+Watch'],
+            imageUrl: 'https://picsum.photos/seed/jam1/400/400',
+            images: ['https://picsum.photos/seed/jam1a/400/400'],
         },
         {
             name: 'Jam Tangan Digital Sport',
@@ -162,8 +162,8 @@ async function main() {
             category: 'jam_tangan',
             price: 300000,
             stock: 25,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Jam+Digital',
-            images: ['https://via.placeholder.com/400x400?text=Sport+Watch'],
+            imageUrl: 'https://picsum.photos/seed/jam2/400/400',
+            images: ['https://picsum.photos/seed/jam2a/400/400'],
         },
         // Kaos Kaki
         {
@@ -172,8 +172,8 @@ async function main() {
             category: 'kaos_kaki',
             price: 50000,
             stock: 50,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Kaos+Kaki',
-            images: ['https://via.placeholder.com/400x400?text=Cotton+Socks'],
+            imageUrl: 'https://picsum.photos/seed/kaoskaki1/400/400',
+            images: ['https://picsum.photos/seed/kaoskaki1a/400/400'],
         },
         {
             name: 'Kaos Kaki Ankle Sport',
@@ -181,8 +181,8 @@ async function main() {
             category: 'kaos_kaki',
             price: 40000,
             stock: 60,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Kaos+Kaki+Sport',
-            images: ['https://via.placeholder.com/400x400?text=Sport+Socks'],
+            imageUrl: 'https://picsum.photos/seed/kaoskaki2/400/400',
+            images: ['https://picsum.photos/seed/kaoskaki2a/400/400'],
         },
         // Bandana
         {
@@ -191,8 +191,8 @@ async function main() {
             category: 'bandana',
             price: 35000,
             stock: 40,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Bandana+Paisley',
-            images: ['https://via.placeholder.com/400x400?text=Paisley+Bandana'],
+            imageUrl: 'https://picsum.photos/seed/bandana1/400/400',
+            images: ['https://picsum.photos/seed/bandana1a/400/400'],
         },
         {
             name: 'Bandana Polos Hitam',
@@ -200,8 +200,8 @@ async function main() {
             category: 'bandana',
             price: 30000,
             stock: 50,
-            imageUrl: 'https://via.placeholder.com/400x400?text=Bandana+Hitam',
-            images: ['https://via.placeholder.com/400x400?text=Black+Bandana'],
+            imageUrl: 'https://picsum.photos/seed/bandana2/400/400',
+            images: ['https://picsum.photos/seed/bandana2a/400/400'],
         },
     ];
 

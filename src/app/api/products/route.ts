@@ -25,7 +25,13 @@ export async function GET(request: NextRequest) {
             orderBy: { createdAt: 'desc' },
         });
 
-        return NextResponse.json({ products });
+        // Map imageUrl to image for frontend compatibility
+        const mappedProducts = products.map(product => ({
+            ...product,
+            image: product.imageUrl || '',
+        }));
+
+        return NextResponse.json({ products: mappedProducts });
     } catch (error) {
         console.error('Get products error:', error);
         return NextResponse.json(

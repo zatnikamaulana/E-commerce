@@ -18,7 +18,13 @@ export async function GET(
             );
         }
 
-        return NextResponse.json({ product });
+        // Map imageUrl to image for frontend compatibility
+        const mappedProduct = {
+            ...product,
+            image: product.imageUrl || '',
+        };
+
+        return NextResponse.json({ product: mappedProduct });
     } catch (error) {
         console.error('Get product error:', error);
         return NextResponse.json(

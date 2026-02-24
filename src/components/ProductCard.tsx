@@ -93,31 +93,31 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </div>
 
                 {/* Product Info */}
-                <div className="p-5">
+                <div className="p-3 sm:p-5">
                     {/* Category Badge */}
                     <div className="mb-2">
-                        <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full capitalize">
+                        <span className="inline-block px-2 sm:px-3 py-0.5 sm:py-1 bg-gray-100 text-gray-700 text-[10px] sm:text-xs font-medium rounded-full capitalize">
                             {product.category}
                         </span>
                     </div>
 
                     {/* Product Name */}
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-gray-700 transition-colors">
+                    <h3 className="text-sm sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2 line-clamp-2 group-hover:text-gray-700 transition-colors">
                         {product.name}
                     </h3>
 
-                    {/* Product Description */}
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                    {/* Product Description - Hidden on mobile */}
+                    <p className="hidden sm:block text-sm text-gray-600 mb-4 line-clamp-2">
                         {product.description}
                     </p>
 
                     {/* Price and Stock */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-2 sm:mt-0">
                         <div>
-                            <div className="text-2xl font-bold text-gray-900">
+                            <div className="text-base sm:text-2xl font-bold text-gray-900">
                                 {formatPrice(product.price)}
                             </div>
-                            <div className="text-xs text-gray-500 mt-1">
+                            <div className="text-[10px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">
                                 Stok: {product.stock}
                             </div>
                         </div>
@@ -126,13 +126,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                         <button
                             onClick={handleAddToCart}
                             disabled={product.stock === 0}
-                            className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${product.stock === 0
-                                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                    : 'bg-gray-900 text-white hover:bg-gray-800 button-ripple'
+                            className={`p-2 sm:p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${product.stock === 0
+                                ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                                : 'bg-gray-900 text-white hover:bg-gray-800 button-ripple'
                                 }`}
                             title="Tambah ke Keranjang"
                         >
-                            <ShoppingCart className="w-5 h-5" strokeWidth={1.5} />
+                            <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={1.5} />
                         </button>
                     </div>
                 </div>

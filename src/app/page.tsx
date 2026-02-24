@@ -171,21 +171,22 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Mobile: Horizontal Scroll, Desktop: Grid */}
+          <div className="md:grid md:grid-cols-3 md:gap-8 flex overflow-x-auto gap-4 pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`group text-center p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200 fade-in-up stagger-${index + 1}`}
+                className={`group text-center p-6 sm:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200 fade-in-up stagger-${index + 1} min-w-[280px] md:min-w-0 snap-center flex-shrink-0`}
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-900 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-8 h-8" strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 text-white rounded-2xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                  <feature.icon className="w-6 h-6 sm:w-8 sm:h-8" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -209,7 +210,7 @@ export default function HomePage() {
 
           {/* Products Grid */}
           {isLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="animate-pulse">
                   <div className="bg-gray-200 aspect-square rounded-2xl mb-4" />
@@ -220,7 +221,7 @@ export default function HomePage() {
             </div>
           ) : featuredProducts.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
                 {featuredProducts.map((product, index) => (
                   <div
                     key={product.id}

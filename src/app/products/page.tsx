@@ -116,8 +116,8 @@ export default function ProductsPage() {
                                 <button
                                     onClick={() => setSelectedCategory('all')}
                                     className={`px-6 py-2.5 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${selectedCategory === 'all'
-                                            ? 'bg-gray-900 text-white shadow-lg scale-105'
-                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-gray-900 text-white shadow-lg scale-105'
+                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     Semua
@@ -127,8 +127,8 @@ export default function ProductsPage() {
                                         key={category}
                                         onClick={() => setSelectedCategory(category)}
                                         className={`px-6 py-2.5 rounded-xl font-medium capitalize transition-all duration-300 transform hover:scale-105 ${selectedCategory === category
-                                                ? 'bg-gray-900 text-white shadow-lg scale-105'
-                                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                            ? 'bg-gray-900 text-white shadow-lg scale-105'
+                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                             }`}
                                     >
                                         {category}
@@ -161,7 +161,7 @@ export default function ProductsPage() {
 
                 {/* Products Grid */}
                 {isLoading ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8">
                         {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
                             <div key={i} className="animate-pulse">
                                 <div className="bg-gray-200 aspect-square rounded-2xl mb-4 skeleton" />
@@ -171,7 +171,7 @@ export default function ProductsPage() {
                         ))}
                     </div>
                 ) : filteredProducts.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8">
                         {filteredProducts.map((product, index) => (
                             <div
                                 key={product.id}
