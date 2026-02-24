@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, Category } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 
 const prisma = new PrismaClient();
@@ -51,7 +51,7 @@ async function main() {
         {
             name: 'Kalung Rantai Emas',
             description: 'Kalung rantai emas 18k dengan desain elegan dan modern',
-            category: 'kalung',
+            category: 'kalung' as Category,
             price: 250000,
             stock: 15,
             imageUrl: 'https://placehold.co/400x400/fbbf24/1e293b?text=Kalung+Emas',
@@ -60,7 +60,7 @@ async function main() {
         {
             name: 'Kalung Liontin Hati',
             description: 'Kalung dengan liontin berbentuk hati, cocok untuk hadiah',
-            category: 'kalung',
+            category: 'kalung' as Category,
             price: 180000,
             stock: 20,
             imageUrl: 'https://placehold.co/400x400/f87171/1e293b?text=Liontin+Hati',
@@ -69,7 +69,7 @@ async function main() {
         {
             name: 'Gelang Charm Silver',
             description: 'Gelang silver dengan charm cantik dan berkualitas',
-            category: 'gelang',
+            category: 'gelang' as Category,
             price: 150000,
             stock: 25,
             imageUrl: 'https://placehold.co/400x400/cbd5e1/1e293b?text=Gelang+Silver',
@@ -78,7 +78,7 @@ async function main() {
         {
             name: 'Gelang Kulit Premium',
             description: 'Gelang kulit asli dengan desain minimalis',
-            category: 'gelang',
+            category: 'gelang' as Category,
             price: 120000,
             stock: 30,
             imageUrl: 'https://placehold.co/400x400/92400e/fef3c7?text=Gelang+Kulit',
@@ -87,7 +87,7 @@ async function main() {
         {
             name: 'Cincin Berlian',
             description: 'Cincin berlian asli dengan setting platinum',
-            category: 'cincin',
+            category: 'cincin' as Category,
             price: 500000,
             stock: 10,
             imageUrl: 'https://placehold.co/400x400/e0e7ff/1e293b?text=Cincin+Berlian',
@@ -96,7 +96,7 @@ async function main() {
         {
             name: 'Cincin Couple',
             description: 'Cincin couple titanium untuk pasangan',
-            category: 'cincin',
+            category: 'cincin' as Category,
             price: 200000,
             stock: 15,
             imageUrl: 'https://placehold.co/400x400/fecaca/1e293b?text=Cincin+Couple',
@@ -105,7 +105,7 @@ async function main() {
         {
             name: 'Anting Mutiara',
             description: 'Anting mutiara air tawar dengan kualitas premium',
-            category: 'anting',
+            category: 'anting' as Category,
             price: 180000,
             stock: 20,
             imageUrl: 'https://placehold.co/400x400/f3f4f6/1e293b?text=Anting+Mutiara',
@@ -114,7 +114,7 @@ async function main() {
         {
             name: 'Anting Hoop Gold',
             description: 'Anting hoop emas dengan desain modern',
-            category: 'anting',
+            category: 'anting' as Category,
             price: 150000,
             stock: 25,
             imageUrl: 'https://placehold.co/400x400/fde047/1e293b?text=Anting+Hoop',
@@ -123,7 +123,7 @@ async function main() {
         {
             name: 'Kacamata Hitam Aviator',
             description: 'Kacamata hitam aviator dengan UV protection',
-            category: 'kacamata',
+            category: 'kacamata' as Category,
             price: 200000,
             stock: 30,
             imageUrl: 'https://placehold.co/400x400/1e293b/f3f4f6?text=Kacamata+Aviator',
@@ -132,7 +132,7 @@ async function main() {
         {
             name: 'Kacamata Baca Vintage',
             description: 'Kacamata baca dengan frame vintage',
-            category: 'kacamata',
+            category: 'kacamata' as Category,
             price: 150000,
             stock: 20,
             imageUrl: 'https://placehold.co/400x400/92400e/fef3c7?text=Kacamata+Vintage',
@@ -141,7 +141,7 @@ async function main() {
         {
             name: 'Jam Tangan Automatic',
             description: 'Jam tangan automatic dengan mesin Swiss',
-            category: 'jam_tangan',
+            category: 'jam_tangan' as Category,
             price: 800000,
             stock: 10,
             imageUrl: 'https://placehold.co/400x400/1e293b/fbbf24?text=Jam+Automatic',
@@ -150,7 +150,7 @@ async function main() {
         {
             name: 'Jam Tangan Digital Sport',
             description: 'Jam tangan digital untuk olahraga',
-            category: 'jam_tangan',
+            category: 'jam_tangan' as Category,
             price: 300000,
             stock: 25,
             imageUrl: 'https://placehold.co/400x400/3b82f6/f3f4f6?text=Jam+Sport',
@@ -159,7 +159,7 @@ async function main() {
         {
             name: 'Kaos Kaki Premium Cotton',
             description: 'Kaos kaki cotton premium, nyaman dan breathable',
-            category: 'kaos_kaki',
+            category: 'kaos_kaki' as Category,
             price: 50000,
             stock: 50,
             imageUrl: 'https://placehold.co/400x400/f3f4f6/1e293b?text=Kaos+Kaki',
@@ -168,7 +168,7 @@ async function main() {
         {
             name: 'Kaos Kaki Ankle Sport',
             description: 'Kaos kaki ankle untuk olahraga',
-            category: 'kaos_kaki',
+            category: 'kaos_kaki' as Category,
             price: 40000,
             stock: 60,
             imageUrl: 'https://placehold.co/400x400/1e293b/f3f4f6?text=Kaos+Kaki+Sport',
@@ -177,7 +177,7 @@ async function main() {
         {
             name: 'Bandana Motif Paisley',
             description: 'Bandana dengan motif paisley klasik',
-            category: 'bandana',
+            category: 'bandana' as Category,
             price: 35000,
             stock: 40,
             imageUrl: 'https://placehold.co/400x400/dc2626/f3f4f6?text=Bandana+Paisley',
@@ -186,7 +186,7 @@ async function main() {
         {
             name: 'Bandana Polos Hitam',
             description: 'Bandana polos warna hitam, serbaguna',
-            category: 'bandana',
+            category: 'bandana' as Category,
             price: 30000,
             stock: 50,
             imageUrl: 'https://placehold.co/400x400/1e293b/f3f4f6?text=Bandana+Hitam',

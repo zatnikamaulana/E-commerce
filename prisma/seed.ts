@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, Category } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 
 const prisma = new PrismaClient();
@@ -52,7 +52,7 @@ async function main() {
         {
             name: 'Kalung Rantai Emas',
             description: 'Kalung rantai emas 18k dengan desain elegan dan modern',
-            category: 'kalung',
+            category: 'kalung' as Category,
             price: 250000,
             stock: 15,
             imageUrl: 'https://picsum.photos/seed/kalung1/400/400',
@@ -64,7 +64,7 @@ async function main() {
         {
             name: 'Kalung Liontin Hati',
             description: 'Kalung dengan liontin berbentuk hati, cocok untuk hadiah',
-            category: 'kalung',
+            category: 'kalung' as Category,
             price: 180000,
             stock: 20,
             imageUrl: 'https://picsum.photos/seed/kalung2/400/400',
@@ -74,7 +74,7 @@ async function main() {
         {
             name: 'Gelang Charm Silver',
             description: 'Gelang silver dengan charm cantik dan berkualitas',
-            category: 'gelang',
+            category: 'gelang' as Category,
             price: 150000,
             stock: 25,
             imageUrl: 'https://picsum.photos/seed/gelang1/400/400',
@@ -83,7 +83,7 @@ async function main() {
         {
             name: 'Gelang Kulit Premium',
             description: 'Gelang kulit asli dengan desain minimalis',
-            category: 'gelang',
+            category: 'gelang' as Category,
             price: 120000,
             stock: 30,
             imageUrl: 'https://picsum.photos/seed/gelang2/400/400',
@@ -93,7 +93,7 @@ async function main() {
         {
             name: 'Cincin Berlian',
             description: 'Cincin berlian asli dengan setting platinum',
-            category: 'cincin',
+            category: 'cincin' as Category,
             price: 500000,
             stock: 10,
             imageUrl: 'https://picsum.photos/seed/cincin1/400/400',
@@ -102,7 +102,7 @@ async function main() {
         {
             name: 'Cincin Couple',
             description: 'Cincin couple titanium untuk pasangan',
-            category: 'cincin',
+            category: 'cincin' as Category,
             price: 200000,
             stock: 15,
             imageUrl: 'https://picsum.photos/seed/cincin2/400/400',
@@ -112,7 +112,7 @@ async function main() {
         {
             name: 'Anting Mutiara',
             description: 'Anting mutiara air tawar dengan kualitas premium',
-            category: 'anting',
+            category: 'anting' as Category,
             price: 180000,
             stock: 20,
             imageUrl: 'https://picsum.photos/seed/anting1/400/400',
@@ -121,7 +121,7 @@ async function main() {
         {
             name: 'Anting Hoop Gold',
             description: 'Anting hoop emas dengan desain modern',
-            category: 'anting',
+            category: 'anting' as Category,
             price: 150000,
             stock: 25,
             imageUrl: 'https://picsum.photos/seed/anting2/400/400',
@@ -131,7 +131,7 @@ async function main() {
         {
             name: 'Kacamata Hitam Aviator',
             description: 'Kacamata hitam aviator dengan UV protection',
-            category: 'kacamata',
+            category: 'kacamata' as Category,
             price: 200000,
             stock: 30,
             imageUrl: 'https://picsum.photos/seed/kacamata1/400/400',
@@ -140,7 +140,7 @@ async function main() {
         {
             name: 'Kacamata Baca Vintage',
             description: 'Kacamata baca dengan frame vintage',
-            category: 'kacamata',
+            category: 'kacamata' as Category,
             price: 150000,
             stock: 20,
             imageUrl: 'https://picsum.photos/seed/kacamata2/400/400',
@@ -150,7 +150,7 @@ async function main() {
         {
             name: 'Jam Tangan Automatic',
             description: 'Jam tangan automatic dengan mesin Swiss',
-            category: 'jam_tangan',
+            category: 'jam_tangan' as Category,
             price: 800000,
             stock: 10,
             imageUrl: 'https://picsum.photos/seed/jam1/400/400',
@@ -159,7 +159,7 @@ async function main() {
         {
             name: 'Jam Tangan Digital Sport',
             description: 'Jam tangan digital untuk olahraga',
-            category: 'jam_tangan',
+            category: 'jam_tangan' as Category,
             price: 300000,
             stock: 25,
             imageUrl: 'https://picsum.photos/seed/jam2/400/400',
@@ -169,7 +169,7 @@ async function main() {
         {
             name: 'Kaos Kaki Premium Cotton',
             description: 'Kaos kaki cotton premium, nyaman dan breathable',
-            category: 'kaos_kaki',
+            category: 'kaos_kaki' as Category,
             price: 50000,
             stock: 50,
             imageUrl: 'https://picsum.photos/seed/kaoskaki1/400/400',
@@ -178,7 +178,7 @@ async function main() {
         {
             name: 'Kaos Kaki Ankle Sport',
             description: 'Kaos kaki ankle untuk olahraga',
-            category: 'kaos_kaki',
+            category: 'kaos_kaki' as Category,
             price: 40000,
             stock: 60,
             imageUrl: 'https://picsum.photos/seed/kaoskaki2/400/400',
@@ -188,7 +188,7 @@ async function main() {
         {
             name: 'Bandana Motif Paisley',
             description: 'Bandana dengan motif paisley klasik',
-            category: 'bandana',
+            category: 'bandana' as Category,
             price: 35000,
             stock: 40,
             imageUrl: 'https://picsum.photos/seed/bandana1/400/400',
@@ -197,7 +197,7 @@ async function main() {
         {
             name: 'Bandana Polos Hitam',
             description: 'Bandana polos warna hitam, serbaguna',
-            category: 'bandana',
+            category: 'bandana' as Category,
             price: 30000,
             stock: 50,
             imageUrl: 'https://picsum.photos/seed/bandana2/400/400',

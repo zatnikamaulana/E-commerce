@@ -173,7 +173,7 @@ export default function AdminDashboard() {
                                 <AlertCircle className="w-5 h-5 text-yellow-600" />
                                 <div>
                                     <p className="font-medium text-yellow-900">
-                                        {stats.pendingPayments} Pembayaran Menunggu Verifikasi
+                                        {stats?.pendingPayments || 0} Pembayaran Menunggu Verifikasi
                                     </p>
                                     <p className="text-sm text-yellow-700">
                                         Klik untuk verifikasi pembayaran
@@ -192,7 +192,7 @@ export default function AdminDashboard() {
                                 <Package className="w-5 h-5 text-red-600" />
                                 <div>
                                     <p className="font-medium text-red-900">
-                                        {stats.lowStockProducts} Produk Stock Rendah
+                                        {stats?.lowStockProducts || 0} Produk Stock Rendah
                                     </p>
                                     <p className="text-sm text-red-700">
                                         Stock kurang dari 10 unit

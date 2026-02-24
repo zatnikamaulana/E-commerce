@@ -44,14 +44,13 @@ export async function POST(request: NextRequest) {
             console.error('Upload error details:', {
                 message: uploadError.message,
                 statusCode: uploadError.statusCode,
-                error: uploadError.error,
                 name: uploadError.name
             });
             return NextResponse.json(
                 {
                     message: 'Gagal upload file',
                     error: uploadError.message,
-                    details: uploadError.error || 'Unknown error'
+                    details: 'Upload failed'
                 },
                 { status: 500 }
             );
